@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Example</title>
+    <script src="../Scripts/angular.js"></script>
+    <script>
+        var myObject = {
+            name: "Adam",
+            weather: "sunny",
+            printMessages: function () {
+                console.log("Hello " + this.name + ".");
+                console.log("Today is " + this.weather + ".");
+            }
+        };
+
+        var myName = "Adam";
+        var myNumber = 23;
+
+        console.info("myObject: " + angular.isObject(myObject));
+        console.info("myName: " + angular.isObject(myName));
+        console.info("myNumber: " + angular.isObject(myNumber));
+    </script>
+</head>
+<body>
+    This is a simple example.
+</body>
+</html>

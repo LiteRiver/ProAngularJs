@@ -57,6 +57,30 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="C05-01\jsdemo.html" />
+    <Content Include="C05-02\jsdemo.html" />
+    <Content Include="C05-03\jsdemo.html" />
+    <Content Include="C05-04\jsdemo.html" />
+    <Content Include="C05-05\jsdemo.html" />
+    <Content Include="C05-06\jsdemo.html" />
+    <Content Include="C05-07\jsdemo.html" />
+    <Content Include="C05-08\jsdemo.html" />
+    <Content Include="C05-09\jsdemo.html" />
+    <Content Include="C05-10\jsdemo.html" />
+    <Content Include="C05-11\jsdemo.html" />
+    <Content Include="C05-12\jsdemo.html" />
+    <Content Include="C05-13\jsdemo.html" />
+    <Content Include="C05-14\jsdemo.html" />
+    <Content Include="C05-15\jsdemo.html" />
+    <Content Include="C05-16\jsdemo.html" />
+    <Content Include="C05-17\jsdemo.html" />
+    <Content Include="C05-18\jsdemo.html" />
+    <Content Include="C05-19\jsdemo.html" />
+    <Content Include="C05-20\jsdemo.html" />
+    <Content Include="C05-21\jsdemo.html" />
+    <Content Include="C05-22\jsdemo.html" />
+    <Content Include="C05-23\jsdemo.html" />
+    <Content Include="C05-24\jsdemo.html" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -70,6 +94,29 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="packages.config" />
+    <Content Include="C05-02\todo.json" />
+    <Content Include="C05-03\todo.json" />
+    <Content Include="C05-04\todo.json" />
+    <Content Include="C05-05\todo.json" />
+    <Content Include="C05-06\todo.json" />
+    <Content Include="C05-07\todo.json" />
+    <Content Include="C05-08\todo.json" />
+    <Content Include="C05-09\todo.json" />
+    <Content Include="C05-10\todo.json" />
+    <Content Include="C05-11\todo.json" />
+    <Content Include="C05-12\todo.json" />
+    <Content Include="C05-13\todo.json" />
+    <Content Include="C05-14\todo.json" />
+    <Content Include="C05-15\todo.json" />
+    <Content Include="C05-16\todo.json" />
+    <Content Include="C05-17\todo.json" />
+    <Content Include="C05-18\todo.json" />
+    <Content Include="C05-19\todo.json" />
+    <Content Include="C05-20\todo.json" />
+    <Content Include="C05-21\todo.json" />
+    <Content Include="C05-22\todo.json" />
+    <Content Include="C05-23\todo.json" />
+    <Content Include="C05-24\todo.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
