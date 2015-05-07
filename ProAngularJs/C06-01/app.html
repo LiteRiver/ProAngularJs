@@ -7,27 +7,39 @@
     <link rel="stylesheet" type="text/css" href="../Content/bootstrap-theme.css" />
     <script src="../Scripts/angular.js"></script>
     <script>
-        angular.module("SportsStore", []);
+        angular.module("SportsStore", ["CustomFilters"]);
     </script>
     <script src="controllers/SportsStore.js"></script>
+    <script src="filters/CustomFilters.js"></script>
+    <script src="controllers/ProductListControllers.js"></script>
 </head>
 <body ng-controller="SportsStoreCtrl">
     <div class="navbar navbar-inverse">
         <a class="navbar-brand" href="#">SPORTS STORE</a>
     </div>
-    <div class="panel panel-default row">
+    <div class="panel panel-default row" ng-controller="ProductListCtrl">
         <div class="col-xs-3">
-            Categories go here
+            <a ng-click="selectCategory()" ng-class="getCategoryClass()"  class="btn btn-block btn-default btn-lg">Home</a>
+            <a ng-repeat="item in products | orderBy:'category' | unique:'category'"
+               ng-click="selectCategory(item)"
+               ng-class="getCategoryClass(item)"
+               class="btn btn-block btn-default btn-lg">{{item}}</a>
         </div>
         <div class="col-xs-8">
-            <div class="well" ng-repeat="item in products">
+            <div class="well" ng-repeat="item in products | filter:categoryFilterFn | range: selectedPage: pageSize">
                 <h3>
                     <strong>{{item.name}}</strong>
                     <span class="pull-right label label-primary">
                         {{item.price | currency}}
-                    </span>
-                    <span class="lead">{{item.description}}</span>
+                    </span>                    
                 </h3>
+                <span class="lead">{{item.description}}</span>
+            </div>
+            <div class="pull-right btn-group">
+                <a 
+                   ng-repeat="page in products | filter:categoryFilterFn|pageCount:pageSize"
+                   ng-click="selectPage($index + 1)" class="btn btn-default"
+                   ng-class="getPageClass($index + 1)">{{$index + 1}}</a>
             </div>
         </div>
     </div>
