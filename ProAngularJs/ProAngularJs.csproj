@@ -130,6 +130,12 @@
     <Content Include="C06-01\controllers\ProductListControllers.js" />
     <Content Include="C06-01\controllers\SportsStore.js" />
     <Content Include="C06-01\filters\CustomFilters.js" />
+    <Content Include="C07-01\app.html" />
+    <Content Include="C07-01\components\cart.js" />
+    <Content Include="C07-01\controllers\ProductListControllers.js" />
+    <Content Include="C07-01\controllers\SportsStore.js" />
+    <Content Include="C07-01\filters\CustomFilters.js" />
+    <Content Include="C07-01\views\ProductList.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
