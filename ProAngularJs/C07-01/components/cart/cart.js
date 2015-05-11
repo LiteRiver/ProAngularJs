@@ -52,7 +52,7 @@
 
                 $scope.itemCount = function () {
                     var total = 0;
-                    
+
                     for (var i = 0; i < cartData.length; i++) {
                         total += cartData[i].count;
                     }

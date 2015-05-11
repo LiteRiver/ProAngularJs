@@ -14,6 +14,7 @@ namespace ProAngularJs.Api.Controllers {
                 return Ok(db
                     .Products
                     .Select(p => new {
+                        id = p.Id,
                         name = p.Name,
                         description = p.Description,
                         category = p.Category,

@@ -7,20 +7,37 @@
     <link rel="stylesheet" type="text/css" href="../Content/bootstrap-theme.css" />
     <script src="../Scripts/angular.js"></script>
     <script>
-        angular.module("SportsStore", ["CustomFilters"]);
+        angular.module("SportsStore", ["CustomFilters", "Cart", "ngRoute"])
+            .config(function ($routeProvider) {
+                $routeProvider.when("/checkout", {
+                    templateUrl: "views/CheckoutSummary.html"
+                }).when("/complete", {
+                    templateUrl: "views/ThankYou.html"
+                }).when("/placeorder", {
+                    templateUrl: "views/placeorder.html"
+                }).when("/products", {
+                    templateUrl: "views/ProductList.html"
+                }).otherwise({
+                    templateUrl: "views/ProductList.html"
+                });
+            });
     </script>
     <script src="controllers/SportsStore.js"></script>
     <script src="filters/CustomFilters.js"></script>
     <script src="controllers/ProductListControllers.js"></script>
+    <script src="components/cart/cart.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="controllers/CheckoutControllers.js"></script>
 </head>
 <body ng-controller="SportsStoreCtrl">
     <div class="navbar navbar-inverse">
         <a class="navbar-brand" href="#">SPORTS STORE</a>
+        <cart-summary></cart-summary>
     </div>
     <div class="alert alert-danger" ng-show="error">
         Error ({{errorStatus}}). The product data was not loaded.
         <a href="app.html" class="alert-link">Click here to try again.</a>
     </div>
-    <ng-include src="'views/ProductList.html'" />
+    <ng-view />
 </body>
 </html>
