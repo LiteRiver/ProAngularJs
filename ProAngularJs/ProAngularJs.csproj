@@ -138,6 +138,7 @@
     <Content Include="C07-01\controllers\SportsStore.js" />
     <Content Include="C07-01\filters\CustomFilters.js" />
     <Content Include="C07-01\views\CheckoutSummary.html" />
+    <Content Include="C07-01\views\PlaceOrder.html" />
     <Content Include="C07-01\views\ProductList.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\version.json" />
@@ -1014,6 +1015,7 @@
     <Compile Include="Api\Controllers\SportsStoreController.cs" />
     <Compile Include="Api\Data\SportsStoreDbContext.cs" />
     <Compile Include="Api\Data\SportsStoreDbInitializer.cs" />
+    <Compile Include="Api\Domain\Order.cs" />
     <Compile Include="Api\Domain\Product.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
