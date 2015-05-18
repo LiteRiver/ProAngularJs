@@ -1,7 +1,7 @@
 ﻿angular.module("SportsStore")
     .constant("ProductsUrl", "/SportsStore/Products")
-    .constant("OrderUrl", "/SportsStore/Orders")
-    .controller("SportsStoreCtrl", function ($scope, $http, ProductsUrl, OrderUrl) {
+    .constant("PlaceOrderUrl", "/SportsStore/PlaceOrder")
+    .controller("SportsStoreCtrl", function ($scope, $http, $location, ProductsUrl, PlaceOrderUrl, Cart) {
         $scope.data = {};
         $http.get(ProductsUrl).success(function (data) {
             $scope.products = data;
@@ -12,11 +12,11 @@
 
         $scope.sendOrder = function (shippingDetails) {
             var order = angular.copy(shippingDetails);
-            order.products = cart.getProducts();
+            order.products = Cart.getProducts();
 
-            $http.post(OrderUrl, order).success(function (data) {
+            $http.post(PlaceOrderUrl, order).success(function (data) {
                 $scope.orderId = data.id;
-                cart.getProducts().length = 0;
+                Cart.getProducts().length = 0;
             }).error(function (error) {
                 $scope.orderError = error;
             }).finally(function () {

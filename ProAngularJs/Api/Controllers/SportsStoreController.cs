@@ -22,5 +22,26 @@ namespace ProAngularJs.Api.Controllers {
                     }).ToList());
             }
         }
+
+        [Route("PlaceOrder")]
+        [HttpPost]
+        public IHttpActionResult PlaceOrder(Order request) {
+            using (var db = new SportsStoreDbContext()) {
+                var order = new Order {
+                    Name = request.Name,
+                    Street = request.Street,
+                    City = request.City,
+                    State = request.State,
+                    Zip = request.Zip,
+                    Country = request.Country,
+                    GiftWrap = request.GiftWrap
+                };
+
+                db.Orders.Add(order);
+                db.SaveChanges();
+
+                return Ok(new { id = order.Id });
+            }
+        }
     }
 }
