@@ -19,6 +19,8 @@ namespace ProAngularJs {
                 cfg.Formatters.Clear();
                 cfg.Formatters.Add(new JsonMediaTypeFormatter());
 
+                cfg.MapHttpAttributeRoutes();
+
                 cfg.Routes.MapHttpRoute(
                     name: "DefaultApi", 
                     routeTemplate: "{controller}/{id}", 

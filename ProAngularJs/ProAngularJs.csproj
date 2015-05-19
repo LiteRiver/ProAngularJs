@@ -130,13 +130,19 @@
     <Content Include="C06-01\controllers\ProductListControllers.js" />
     <Content Include="C06-01\controllers\SportsStore.js" />
     <Content Include="C06-01\filters\CustomFilters.js" />
+    <Content Include="C07-01\admin.html" />
     <Content Include="C07-01\app.html" />
     <Content Include="C07-01\components\cart\Cart.js" />
     <Content Include="C07-01\components\cart\CartSummary.html" />
+    <Content Include="C07-01\controllers\AdminControllers.js" />
     <Content Include="C07-01\controllers\CheckoutControllers.js" />
     <Content Include="C07-01\controllers\ProductListControllers.js" />
     <Content Include="C07-01\controllers\SportsStore.js" />
     <Content Include="C07-01\filters\CustomFilters.js" />
+    <Content Include="C07-01\views\AdminLogin.html" />
+    <Content Include="C07-01\views\AdminMain.html" />
+    <Content Include="C07-01\views\AdminOrders.html" />
+    <Content Include="C07-01\views\AdminProducts.html" />
     <Content Include="C07-01\views\CheckoutSummary.html" />
     <Content Include="C07-01\views\PlaceOrder.html" />
     <Content Include="C07-01\views\ProductList.html" />
@@ -1014,30 +1020,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\Controllers\SportsStoreController.cs" />
+    <Compile Include="Api\Controllers\UserController.cs" />
     <Compile Include="Api\Data\SportsStoreDbContext.cs" />
     <Compile Include="Api\Data\SportsStoreDbInitializer.cs" />
+    <Compile Include="Api\Data\SportsStoreDbMigrateConfiguration.cs" />
     <Compile Include="Api\Domain\Order.cs" />
     <Compile Include="Api\Domain\OrderProduct.cs" />
     <Compile Include="Api\Domain\Product.cs" />
+    <Compile Include="Api\Domain\User.cs" />
+    <Compile Include="Api\Models\LoginRequest.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505060730059_InitialCreate.cs" />
-    <Compile Include="Migrations\201505060730059_InitialCreate.Designer.cs">
-      <DependentUpon>201505060730059_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Api\Models\PlaceOrderRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="C06-01\components\" />
     <Folder Include="C06-01\views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505060730059_InitialCreate.resx">
-      <DependentUpon>201505060730059_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

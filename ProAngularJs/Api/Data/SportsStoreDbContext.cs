@@ -15,7 +15,7 @@ namespace ProAngularJs.Api.Data {
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
 
-            modelBuilder.Entity<OrderProduct>().HasRequired(t => t.Order).WithMany(t => t.Products);
+            modelBuilder.Entity<OrderProduct>().HasRequired(t => t.Order).WithMany(t => t.OrderProducts);
 
             modelBuilder.Entity<OrderProduct>().HasRequired(t => t.Product).WithMany();
 
@@ -27,6 +27,8 @@ namespace ProAngularJs.Api.Data {
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<OrderProduct> OrderProducts { get; set; }
+
+        public DbSet<User> Users { get; set; }
 
     }
 }

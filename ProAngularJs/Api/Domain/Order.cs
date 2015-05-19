@@ -21,10 +21,10 @@ namespace ProAngularJs.Api.Domain {
 
         public bool GiftWrap { get; set; }
 
-        private ICollection<OrderProduct> m_products;
-        public virtual ICollection<OrderProduct> Products {
-            get { return m_products ?? (m_products = new List<OrderProduct>()); }
-            set { m_products = value; }
+        private ICollection<OrderProduct> m_orderProducts;
+        public virtual ICollection<OrderProduct> OrderProducts {
+            get { return m_orderProducts ?? (m_orderProducts = new List<OrderProduct>()); }
+            set { m_orderProducts = value; }
         }
     }
 }
