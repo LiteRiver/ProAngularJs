@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace ProAngularJs.Api.Controllers
 {
+    [RoutePrefix("User")]
     public class UserController : ApiController
     {
         [Route("Login")]

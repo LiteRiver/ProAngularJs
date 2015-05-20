@@ -11,7 +11,5 @@ namespace ProAngularJs.Api.Data {
             AutomaticMigrationDataLossAllowed = true;
             ContextKey = "ProAngularJs.Api.Data.SportsStoreDbContext";
         }
-
-
     }
 }

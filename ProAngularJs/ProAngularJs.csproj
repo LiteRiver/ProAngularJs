@@ -1019,6 +1019,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\Controllers\ProductsController.cs" />
     <Compile Include="Api\Controllers\SportsStoreController.cs" />
     <Compile Include="Api\Controllers\UserController.cs" />
     <Compile Include="Api\Data\SportsStoreDbContext.cs" />
@@ -1029,6 +1030,7 @@
     <Compile Include="Api\Domain\Product.cs" />
     <Compile Include="Api\Domain\User.cs" />
     <Compile Include="Api\Models\LoginRequest.cs" />
+    <Compile Include="Api\Models\ProductModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
