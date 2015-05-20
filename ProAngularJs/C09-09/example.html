@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ExampleApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>AngularJS Demo</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script>
+        var myApp = angular.module("ExampleApp", []);
+        myApp.controller("DayCtrl", function ($scope) {
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            $scope.day = dayNames[new Date().getDay()];            
+        });
+
+        myApp.controller("TomorrowCtrl", function ($scope) {
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            $scope.tomorrow = dayNames[(new Date().getDay() + 1) % 7];
+        });
+
+        myApp.directive("highlight", function () {
+            return function (scope, element, attrs) {
+                if (scope.day == attrs["highlight"]) {                    
+                    element.css("color", "red");
+                }
+            };
+        });
+    </script>
+</head>
+<body>
+    <div class="panel">
+        <div class="page-header">
+            <h3>AngularJS App</h3>
+        </div>
+        <h4 ng-controller="DayCtrl" highlight="Wednesday">Today is {{day || "(unkown)"}}</h4>
+        <h4 ng-controller="TomorrowCtrl">Tomorrow is {{tomorrow || "(unkown)"}}</h4>
+    </div>
+</body>
+</html>

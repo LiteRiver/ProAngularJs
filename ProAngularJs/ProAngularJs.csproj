@@ -147,6 +147,13 @@
     <Content Include="C07-01\views\PlaceOrder.html" />
     <Content Include="C07-01\views\ProductList.html" />
     <Content Include="C07-01\views\ThankYou.html" />
+    <Content Include="C09-13\example.html" />
+    <Content Include="C09-12\example.html" />
+    <Content Include="C09-11\example.html" />
+    <Content Include="C09-10\example.html" />
+    <Content Include="C09-09\example.html" />
+    <Content Include="C09-08\example.html" />
+    <Content Include="C09-01\example.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
