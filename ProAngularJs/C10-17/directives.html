@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ExampleApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Directives</title>
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="../Content/bootstrap-theme.css" />
+    <style>
+        .odd {
+            background-color: lightcoral;
+        }
+
+        .even {
+            background-color: lavenderblush;
+        }
+    </style>
+    <script src="../Scripts/angular.js"></script>
+    <script>
+        angular.module("ExampleApp", [])
+            .controller("DefaultCtrl", function ($scope) {
+                $scope.data = {};
+
+                $scope.todos = [
+                    { action: "Get groceries", complete: false },
+                    { action: "Call plumber", complete: false },
+                    { action: "Buy running shoes", complete: true },
+                    { action: "Buy flowers", complete: false },
+                    { action: "Call family", complete: false }];
+
+                $scope.viewFile = function () {
+                    return $scope.showList ? "list.html" : "table.html";
+                };
+
+                $scope.reportChange = function () {
+                    console.log("Displayed content: " + $scope.viewFile());
+                };
+            });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="todoPanel" class="panel panel-default" ng-controller="DefaultCtrl">
+            <div class="panel-heading">To Do List</div>
+            <div class="well">
+                <div class="radio" ng-repeat="button in ['None', 'Table', 'List']">
+                    <label>
+                        <input type="radio" ng-model="data.mode" value="{{button}}" ng-checked="$first" />
+                        {{button}}
+                    </label>
+                </div>
+            </div>
+            <div ng-switch="data.mode">
+                <div ng-switch-when="Table">
+                    <table class="table table-bordered">
+                        <thead><tr><th>#</th><th>Action</th><th>Done</th></tr></thead>
+                        <tbody>
+                            <tr ng-repeat="item in todos" ng-class="$odd ? 'odd': 'even'">
+                                <td>{{$index + 1}}</td>
+                                <td ng-repeat="prop in item">{{prop}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div ng-switch-when="List">
+                    <ol>
+                        <li ng-repeat="item in todos">
+                            {{item.action}}
+                            <span ng-if="item.complete">(Done)</span>
+                        </li>
+                    </ol>
+                </div>
+                <div ng-switch-default>
+                    Select another option to display a layout
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
