@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ExampleApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AngularJS Demo</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="controllers.js"></script>
+    <script src="filters.js"></script>
+    <script src="directives.js"></script>
+    <script src="services.js"></script>
+    <script>
+        angular.module("ExampleApp", [
+            "ExampleApp.Controllers",
+            "ExampleApp.Filters",
+            "ExampleApp.Directives",
+            "ExampleApp.Services"])
+            .value("nowValue", now);
+    </script>
+</head>
+<body>
+    <div class="panel">
+        <div class="page-header">
+            <h3>AngularJS App</h3>
+        </div>
+        <h4 ng-controller="DayCtrl" highlight="Thursday">Today is {{day || "(unkown)" | dayName}}</h4>
+        <h4 ng-controller="TomorrowCtrl">Tomorrow is {{tomorrow || "(unkown)"| dayName}}</h4>
+    </div>
+</body>
+</html>
