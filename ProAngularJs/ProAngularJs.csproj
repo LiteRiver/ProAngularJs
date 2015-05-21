@@ -166,6 +166,15 @@
     <Content Include="C09-01\example.html" />
     <Content Include="C09-16\filters.js" />
     <Content Include="C09-16\services.js" />
+    <Content Include="C10-10\directives.html" />
+    <Content Include="C10-09\directives.html" />
+    <Content Include="C10-07\directives.html" />
+    <Content Include="C10-06\directives.html" />
+    <Content Include="C10-05\directives.html" />
+    <Content Include="C10-04\directives.html" />
+    <Content Include="C10-03\directives.html" />
+    <Content Include="C10-02\directives.html" />
+    <Content Include="C10-01\directives.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />

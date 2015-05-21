@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ExampleApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Directives</title>
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="../Content/bootstrap-theme.css" />
+    <style>
+        .odd{
+            background-color:lightcoral;
+        }
+
+        .even{
+            background-color:lavenderblush;
+        }
+    </style>
+    <script src="../Scripts/angular.js"></script>
+    <script>
+        angular.module("ExampleApp", [])
+            .controller("DefaultCtrl", function ($scope) {
+                $scope.todos = [
+                    { action: "Get groceries", complete: false },
+                    { action: "Call plumber", complete: false },
+                    { action: "Buy running shoes", complete: true },
+                    { action: "Buy flowers", complete: false },
+                    { action: "Call family", complete: false }];
+            });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="todoPanel" class="panel panel-default" ng-controller="DefaultCtrl">
+            <div class="panel-heading">To Do List</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr><th>#</th><th>Action</th><th>Done</th></tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat-start="item in todos">
+                        <td>This is item {{$index}}</td>
+                    </tr>
+                    <tr>
+                        <td>The action is: {{item.action}}</td>
+                    </tr>
+                    <tr ng-repeat-end>
+                        <td>Item {{$index}} is {{item.complete? '' : 'not '}} complete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
