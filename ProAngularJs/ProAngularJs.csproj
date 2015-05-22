@@ -166,6 +166,9 @@
     <Content Include="C09-01\example.html" />
     <Content Include="C09-16\filters.js" />
     <Content Include="C09-16\services.js" />
+    <Content Include="C10-18\directives.html" />
+    <Content Include="C10-18\list.html" />
+    <Content Include="C10-18\table.html" />
     <Content Include="C10-17\directives.html" />
     <Content Include="C10-17\list.html" />
     <Content Include="C10-17\table.html" />
