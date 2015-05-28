@@ -189,6 +189,12 @@
     <Content Include="C10-02\directives.html" />
     <Content Include="C10-01\directives.html" />
     <Content Include="C10-11\table.html" />
+    <Content Include="C12-18\forms.html" />
+    <Content Include="C12-15\forms.html" />
+    <Content Include="C12-14\forms.html" />
+    <Content Include="C12-13\forms.html" />
+    <Content Include="C12-12\forms.html" />
+    <Content Include="C12-06\forms.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
