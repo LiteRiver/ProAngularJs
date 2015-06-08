@@ -195,6 +195,13 @@
     <Content Include="C12-13\forms.html" />
     <Content Include="C12-12\forms.html" />
     <Content Include="C12-06\forms.html" />
+    <Content Include="C13-10\Controllers.html" />
+    <Content Include="C13-08\Controllers.html" />
+    <Content Include="C13-07\Controllers.html" />
+    <Content Include="C13-06\Controllers.html" />
+    <Content Include="C13-05\Controllers.html" />
+    <Content Include="C13-04\Controllers.html" />
+    <Content Include="C13-10\controllers.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ExampleApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Controllers</title>
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="../Content/bootstrap-theme.css" />
+    <script src="../Scripts/angular.js"></script>
+    <script>
+        angular.module("ExampleApp", [])
+            .controller("SimpleCtrl", function ($scope) {
+                $scope.addresses = {};
+
+                $scope.setAddress = function (type, zip) {
+                    console.log("Type: " + type + " " + zip);
+                    $scope.addresses[type] = zip;
+                };
+
+                $scope.copyAddress = function () {
+                    $scope.shippingZip = $scope.billingZip;
+                };
+            });
+    </script>
+</head>
+<body ng-controller="SimpleCtrl">
+    <div class="well">
+        <h4>Billing Zip Code</h4>
+        <div class="form-group">
+            <input class="form-control" ng-model="billingZip" />
+        </div>
+        <button class="btn btn-primary" ng-click="setAddress('billingZip', billingZip)">
+            Save Billing
+        </button>
+    </div>
+    <div class="well">
+        <h4>Shipping Zip Code</h4>
+        <div class="form-group">
+            <input class="form-control" ng-model="shippingZip" />
+        </div>
+        <button class="btn btn-primary" ng-click="copyAddress()">
+            Use Billing
+        </button>
+        <button class="btn btn-primary" ng-click="setAddress('shippingZip', shippingZip)">
+            Save Shipping
+        </button>
+    </div>
+</body>
+</html>
