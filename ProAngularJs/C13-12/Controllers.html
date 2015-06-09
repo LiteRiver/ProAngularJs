@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ExampleApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Controllers</title>
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="../Content/bootstrap-theme.css" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="controllers.js"></script>
+</head>
+<body ng-controller="TopLevelCtrl">
+   <div class="well">
+       <h4>Top Level Controller</h4>
+       <div class="form-group">
+           <span class="input-group-btn">
+               <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse</button>
+               <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+           </span>
+           <input type="text" class="form-control" ng-model="data.dataValue" />
+       </div>
+   </div>
+    <div class="well" ng-controller="FirstChildCtrl">
+        <h4>First Child Controller</h4>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse</button>
+                <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            </span>
+            <input type="text" class="form-control" ng-model="data.dataValue" />
+        </div>
+    </div>
+    <div class="well" ng-controller="SecondChildCtrl">
+        <h4>Second Child Controller</h4>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse</button>
+                <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+                <button class="btn btn-default" type="button" ng-click="shiftFour()">Shift</button>
+            </span>
+            <input type="text" class="form-control" ng-model="data.dataValue" />
+        </div>
+    </div>
+</body>
+</html>
