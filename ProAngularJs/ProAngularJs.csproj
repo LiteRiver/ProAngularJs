@@ -206,6 +206,7 @@
     <Content Include="C13-10\controllers.js" />
     <Content Include="C13-14\Controllers.html" />
     <Content Include="C13-15\Controllers.html" />
+    <Content Include="C14-01\Filters.html" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
